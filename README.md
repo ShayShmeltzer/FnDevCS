@@ -3,23 +3,28 @@ A workshop for working with Oracle Developer Cloud and Project Fn
 
 # Create a DevCS Project
 Create a new Project in Developer Cloud Service (DevCS) - use your name in the project name "ShayFn"
+ <br>![step image](images/1.png)
 </br>Choose to create a project with an initial repository (this will create an empty git repository - keep the readme file in the next wizard step)
+<br> ![step image](images/2.png)
+<br> ![step image](images/3.png)
 </br>On the right side of the project home page in the repositories tab, click the clone button for your git repository and copy the URL for the https connection.
+<br> ![step image](images/4.png)
 
 # Create a function and push to git
 Open a terminal window on your machine (or go to the command line)
-<ol>
-</li><li>Clone the git repository to your machine:
-</li><li>Git clone (paste-the path)
-</li><li>When prompted to login provide the password for your account
-</li><li>Once the clone has completed cd into the new directory
-</li><li>Create a new function in the directory using:
-</br>   fn init --runtime go DevCSFn 
-</li><li>This creates a function that you can now push into the git repository
-</li><li>Add the new files : git add . -A
-</li><li>Commit the code using : git commit -m "initial version"
-</li><li>Push the code into DevCS : git push
-</li></ol>
+1. 
+1. Clone the git repository to your machine:
+1. Git clone (paste-the path)
+1. When prompted to login provide the password for your account
+1. Once the clone has completed cd into the new directory
+    <br> ![step image](images/5.png)
+1. Create a new function in the directory using:
+<br>    fn init --runtime go DevCSFn 
+1. This creates a function that you can now push into the git repository
+1. Add the new files : git add . -A
+1. Commit the code using : git commit -m "initial version"
+1. Push the code into DevCS : git push
+
 </br>Your code is now in the cloud - switch back to your browser and navigate to the git section to see it.
 
 # Creating A Build Job
