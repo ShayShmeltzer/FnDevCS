@@ -20,43 +20,51 @@ Open a terminal window on your machine (or go to the command line)
     <br> ![step image](images/5.png)
 1. Create a new function in the directory using:
 <br>    fn init --runtime go DevCSFn 
+    <br> ![step image](images/6.png)
 1. This creates a function that you can now push into the git repository
 1. Add the new files : git add . -A
 1. Commit the code using : git commit -m "initial version"
 1. Push the code into DevCS : git push
+    <br> ![step image](images/7.png)
 
 </br>Your code is now in the cloud - switch back to your browser and navigate to the git section to see it.
-
+    <br> ![step image](images/8.png)
+    
 # Creating A Build Job
 Next we are going to create build job that will publish our Fn function to the Functions Service
 </br>
-<ol>
-<li>In DevCS click te Build tab, and click to create a new build - give it a name "Fn CICD" and choose the default VM template
-</li><li>In the Git tab click "add source control" to add your Git repository and point it to the master branch of your git repo.
-</li><li>Check the "Automatic" check box so the build will be invoked each time code changes in the master branch
-</li><li>Switch to the Steps tab and create a new Step using a Docker->Login operation
-</li><li>Provide the registry into which the function docker image will be published - phx.ocir.io
-</li><li>For user use the OCI user, and for password provide the auth token for that user
+
+1. In DevCS click te Build tab, and click to create a new build - give it a name "Fn CICD" and choose the default VM template
+    <br> ![step image](images/10.png)
+    <br> ![step image](images/11.png)
+1. In the Git tab click "add source control" to add your Git repository and point it to the master branch of your git repo.
+1. Check the "Automatic" check box so the build will be invoked each time code changes in the master branch
+    <br> ![step image](images/12.png)
+1. Switch to the Steps tab and create a new Step using a Docker->Login operation
+1. Provide the registry into which the function docker image will be published - phx.ocir.io
+1. For user use the OCI user, and for password provide the auth token for that user
 </br>(You can find this information on your compute -> users section choosing the auth key on the right menu)
-</li></ol>
+    <br> ![step image](images/13.png)
 
 Next add an OCIcli step to configure your OCI environment 
 </br>(you can find most of this information in your compute->users section with API Keys selected on the left
 </br>If you don't have a signing key use the steps here - https://www.oracle.com/webfolder/technetwork/tutorials/infographics/oci_faas_gettingstarted_quickview/functions_quickview_top/functions_quickview/index.html# )
-
+    <br> ![step image](images/14.png)
+    <br> ![step image](images/17.png)
 </br>Due to a little bug we now need to add a shell script step that will change the priviliges on the OCI config files. Use the following line:
 </br>chmod 777 /home/builder/.oci/config 
-
+    <br> ![step image](images/18.png)
+    
 </br>Now add an Fn->Fn OCI step 
 </br>The information about the compartment id is in the "Getting started" section of the app you created on FaaS
-
+    <br> ![step image](images/19.png)
 </br>Add an Fn->Fn Build step
 </br>Fill in the registry host phx.ocir.io , and the user (same as in step 1 of the build)
-
+    <br> ![step image](images/21.png)
 </br>Add an Fn->Fn Deploy step 
 </br>Fill in the name of the app you created in previous labs, the registry host, user name, 
     and the api URL (which is available on the app Getting Started Tab)
-
+    <br> ![step image](images/22.png)
 </br>Now click Save and then Run the Build, You can monitor the execution through the login
 
 </br>If everything worked as expected your new function should now appear in your application
