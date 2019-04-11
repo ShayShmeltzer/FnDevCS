@@ -66,7 +66,7 @@ Next add an OCIcli step to configure your OCI environment
 </br>Add an Fn->Fn Deploy step 
 </br>Fill in the name of the app you created in previous labs, the registry host, user name, 
     and the api URL (which is available on the app Getting Started Tab)
-    <br> ![step image](images/22.png)
+    <br> ![step image](images/25.png)
 </br>Now click Save and then Run the Build, You can monitor the execution through the login
 
 </br>If everything worked as expected your new function should now appear in your application
