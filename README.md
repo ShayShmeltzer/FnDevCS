@@ -76,9 +76,9 @@ Change the message that is presented from the function, when done with the chang
 
 Back in the build tab you should now see a new build job queued to execute. It will deploy the updates you did to your code to the FaaS.
 
-#Advance Steps
+# Advance Steps
 
-#Working with issues
+# Working with issues
 1. Click the Issues tab on the right side menu
 1. Create a couple of issues in your system
 1. Click the boards tab on the right side menu
@@ -88,7 +88,7 @@ Back in the build tab you should now see a new build job queued to execute. It w
 1. Start the new Sprint
 1. Change the status of an issue in the board
 
-#Working with branches (GitFlow)
+# Working with branches (GitFlow)
 1. In the git tab switch to the "Refs" section (at the top right)
 1. Click the "Create Branch"
 1. Call it fix1
