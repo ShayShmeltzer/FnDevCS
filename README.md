@@ -1,6 +1,8 @@
 # FnDevCS
 A workshop for working with Oracle Developer Cloud and Project Fn
 
+Access your DevCS instance at - https://devcs-gse00014338.developer.ocp.oraclecloud.com/devcs-gse00014338
+
 # Create a DevCS Project
 Create a new Project in Developer Cloud Service (DevCS) - use your name in the project name "ShayFn"
  <br>![step image](images/1.png)
@@ -74,3 +76,25 @@ Change the message that is presented from the function, when done with the chang
 
 Back in the build tab you should now see a new build job queued to execute. It will deploy the updates you did to your code to the FaaS.
 
+#Advance Steps
+
+#Working with issues
+1. Click the Issues tab on the right side menu
+1. Create a couple of issues in your system
+1. Click the boards tab on the right side menu
+1. Create a new SCRUM board
+1. Create a new Sprint
+1. Drag issues from the backlog to the new sprint
+1. Start the new Sprint
+1. Change the status of an issue in the board
+
+#Working with branches (GitFlow)
+1. In the git tab switch to the "Refs" section (at the top right)
+1. Click the "Create Branch"
+1. Call it fix1
+1. Fix code in your function in the branch (click the pencil to edit the file and then commit)
+1. Click Merge Requests in the right side menu
+1. Create a new Merge request
+1. Fill the details to merge into master your branch code. In the second step - type 1 in the issues to hook the fix to your issue.
+1. View your merge request, check the changed files tab, provide a comment by clickin on the change line of code
+1. Approve the change, and click merge to merge your changes into the main branch.
