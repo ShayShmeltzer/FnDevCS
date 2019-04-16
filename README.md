@@ -60,9 +60,6 @@ Next add an OCIcli step to configure your OCI environment
 </br>Now add an Fn->Fn OCI step 
 </br>The information about the compartment id is in the "Getting started" section of the app you created on FaaS
     <br> ![step image](images/19.png)
-</br>Add an Fn->Fn Build step
-</br>Fill in the registry host phx.ocir.io , and the user (same as in step 1 of the build)
-    <br> ![step image](images/21.png)
 </br>Add an Fn->Fn Deploy step 
 </br>Fill in the name of the app you created in previous labs, the registry host, user name, 
     and the api URL (which is available on the app Getting Started Tab). Make sure the "Do not push" checkbox is uncheked.
